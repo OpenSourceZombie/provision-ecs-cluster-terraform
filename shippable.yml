@@ -44,7 +44,7 @@ resources:
       params:
         # Configure these params based on your AWS Network configuration
         ECS_CLUSTER: "laraveltest-cluster"
-        ECS_KEY_PAIR_NAME: "rabie-euwest1"
+        ECS_KEY_PAIR_NAME: "terraform"
         REGION: "eu-west-1"
         TEST_VPC: "test_vpc"
         TEST_NETWORK_CIDR: "210.0.0.0/16"
