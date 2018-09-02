@@ -5,7 +5,7 @@ resources:
     type: gitRepo
     # Replace dr_github with your own GitHub or SCM integration
     # http://docs.shippable.com/platform/integration/github
-    integration: dr_github
+    integration: github
     pointer:
       # Replace devops-recipes/provision-ecs-cluster-terraform with your SCM
       # repository
@@ -17,10 +17,10 @@ resources:
     type: integration
     # Replace dr_aws_keys with your own AWS Keys integration
     # http://docs.shippable.com/platform/integration/aws-keys/
-    integration: dr_aws_keys
+    integration: aws
     pointer:
       # Replace us-east-1 with the region where you want to provision the VPC
-      region: us-east-1
+      region: eu-west-1
 
   # State resource to store Terraform State
   - name: pect_net_tf_state
@@ -32,9 +32,9 @@ resources:
     version:
       params:
         # Configure these params based on your AWS Network configuration
-        ECS_CLUSTER: "sample-cluster"
-        ECS_KEY_PAIR_NAME: "ambarish-useast1"
-        REGION: "us-east-1"
+        ECS_CLUSTER: "laraveltest-cluster"
+        ECS_KEY_PAIR_NAME: "rabie-euwest1"
+        REGION: "eu-west-1"
         TEST_VPC: "test_vpc"
         TEST_NETWORK_CIDR: "210.0.0.0/16"
         TEST_PUBLIC_01_CIDR: "210.0.0.0/24"

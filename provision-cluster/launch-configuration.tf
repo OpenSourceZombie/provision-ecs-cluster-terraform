@@ -1,7 +1,7 @@
 resource "aws_launch_configuration" "ecs-launch-configuration" {
     name                        = "ecs-launch-configuration"
     image_id                    = "ami-fad25980"
-    instance_type               = "t2.xlarge"
+    instance_type               = "t2.medium"
     iam_instance_profile        = "${aws_iam_instance_profile.ecs-instance-profile.id}"
 
     root_block_device {

@@ -1,17 +1,17 @@
-data "aws_ecs_task_definition" "wordpress" {
-  task_definition = "${aws_ecs_task_definition.wordpress.family}"
+data "aws_ecs_task_definition" "laraveltest" {
+  task_definition = "${aws_ecs_task_definition.laraveltest.family}"
 }
 
-resource "aws_ecs_task_definition" "wordpress" {
+resource "aws_ecs_task_definition" "laraveltest" {
     family                = "hello_world"
     container_definitions = <<DEFINITION
 [
   {
-    "name": "wordpress",
+    "name": "nginx",
     "links": [
-      "mysql"
+      "laravel"
     ],
-    "image": "wordpress",
+    "image": "nginx",
     "essential": true,
     "portMappings": [
       {
@@ -23,17 +23,14 @@ resource "aws_ecs_task_definition" "wordpress" {
     "cpu": 10
   },
   {
-    "environment": [
-      {
-        "name": "MYSQL_ROOT_PASSWORD",
-        "value": "password"
-      }
-    ],
-    "name": "mysql",
-    "image": "mysql",
+    "name": "laravel",
+    "image": "laravel",
     "cpu": 10,
     "memory": 500,
     "essential": true
+    "memory": 500,
+    "cpu": 10
+
   }
 ]
 DEFINITION
