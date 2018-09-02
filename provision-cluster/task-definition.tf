@@ -11,21 +11,20 @@ resource "aws_ecs_task_definition" "laraveltest" {
     "links": [
       "laravel"
     ],
-    "image": "nginx",
+    "image": "050543387869.dkr.ecr.eu-west-1.amazonaws.com/nginx",
     "essential": true,
     "portMappings": [
       {
-        "containerPort": 80,
-        "hostPort": 80
+        "containerPort": 80
       }
     ],
-    "memory": 500,
+    "memory": 200,
     "cpu": 10
   },
   {
     "name": "laravel",
-    "image": "laravel",
-    "memory": 500,
+    "image": "050543387869.dkr.ecr.eu-west-1.amazonaws.com/laravel",
+    "memory": 200,
     "cpu": 10
 
   }
