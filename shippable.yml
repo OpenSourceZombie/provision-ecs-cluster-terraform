@@ -5,7 +5,7 @@ build:
     - 'if [ $IS_PULL_REQUEST == "false" ] ; then docker build -f Dockerfile.nginx -t 050543387869.dkr.ecr.eu-west-1.amazonaws.com/nginx:latest .; fi'
     - 'if [ $IS_PULL_REQUEST == "false" ] ; then docker build -f code/Dockerfile -t 050543387869.dkr.ecr.eu-west-1.amazonaws.com/laravel:latest code; fi'
     - 'if [ $IS_PULL_REQUEST == "false" ] ; then docker push 050543387869.dkr.ecr.eu-west-1.amazonaws.com/nginx:latest; fi'
-    - 'if [ $IS_PULL_REQUEST == "false" ] ; then docker push 050543387869.dkr.ecr.eu-west-1.amazonaws.com/laravelx:latest; fi'
+    - 'if [ $IS_PULL_REQUEST == "false" ] ; then docker push 050543387869.dkr.ecr.eu-west-1.amazonaws.com/laravel:latest; fi'
 integrations:
   # adding awsKeys integration so that credentials are available to CI Job
   # http://docs.shippable.com/platform/integration/aws-keys/
