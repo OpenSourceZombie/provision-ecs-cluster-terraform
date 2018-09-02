@@ -1,3 +1,7 @@
+build:
+  ci:
+    - 'true'
+
 resources:
 
   # pect is an acronym for provision-ecs-cluster-terraform
