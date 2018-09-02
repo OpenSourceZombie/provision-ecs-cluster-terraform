@@ -25,9 +25,6 @@ resource "aws_ecs_task_definition" "laraveltest" {
   {
     "name": "laravel",
     "image": "laravel",
-    "cpu": 10,
-    "memory": 500,
-    "essential": true
     "memory": 500,
     "cpu": 10
 
