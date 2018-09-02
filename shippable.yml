@@ -20,7 +20,7 @@ resources:
     pointer:
       # Replace devops-recipes/provision-ecs-cluster-terraform with your SCM
       # repository
-      sourceName: "devops-recipes/provision-ecs-cluster-terraform"
+      sourceName: "OpenSourceZombie/provision-ecs-cluster-terraform"
       branch: master
 
   # AWS integration needed by Terraform
