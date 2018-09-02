@@ -15,7 +15,8 @@ resource "aws_ecs_task_definition" "laraveltest" {
     "essential": true,
     "portMappings": [
       {
-        "containerPort": 80
+        "containerPort": 80,
+        "hostPort": 80
       }
     ],
     "memory": 200,
