@@ -2,8 +2,15 @@ build:
   ci:
     - 'true'
 
+integrations:
+  # adding awsKeys integration so that credentials are available to CI Job
+  # http://docs.shippable.com/platform/integration/aws-keys/
+  hub:
+    - integrationName: aws
+      type: amazonKeys
+      region: eu-west-1
+      
 resources:
-
   # pect is an acronym for provision-ecs-cluster-terraform
   - name: pect_repo
     type: gitRepo
